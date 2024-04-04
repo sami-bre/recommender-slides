@@ -1,5 +1,5 @@
 const sliderElements = document.querySelectorAll('input[type="range"]');
-var sliderValues = [20, 20, 20, 10, 10]; // Initial values (modify as needed)
+var sliderValues = [20, 20, 20, 20, 20]; // Initial values (modify as needed)
 
 const updateDisplay = () => {
     sliderElements.forEach((slider, index) => {
