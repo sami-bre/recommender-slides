@@ -29,6 +29,9 @@ sliderElements.forEach((slider, index) => {
 
 
 function update_slider_values(slider_values, slider_index, delta) {
+
+    // shift each value back by 5
+    slider_values = slider_values.map(x => x - 5);
     
     if(delta > 0) {
         // slider value increased
@@ -46,7 +49,7 @@ function update_slider_values(slider_values, slider_index, delta) {
         }
     } else {
         // slider value decreased
-        spaces = slider_values.map(x => 80.0 - x);
+        spaces = slider_values.map(x => 75.0 - x);
         total_space = 0;
         for(i = 0; i < spaces.length; i++) {
             if(i != slider_index) {
@@ -59,6 +62,9 @@ function update_slider_values(slider_values, slider_index, delta) {
             }
         }
     }
+
+    // shift each value forward by 5
+    slider_values = slider_values.map(x => x + 5);
 
     slider_values[slider_index] = slider_values[slider_index] + delta;
   
